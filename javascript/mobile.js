@@ -229,131 +229,131 @@ if (currentPage == 'index.html' || !currentPage || currentPage == ""){ //do all 
 
 
 } else if (currentPage == 'about' || currentPage == 'about.html'){ //do all the about page stuff
-  // document.location = 'mobile.html';
+//   // document.location = 'mobile.html';
 
-  var scrollAmount = 0;
-  var scrollSpeed = 0.01;
-  var scrollSpeedInitial = 0.06; // Initial speed to reset back to later on
-  var maxSpeed = .5 // Maximum speed, has to do with adding 20 to the scroll idk y.
-  const growthRate = 1.025; // RATE of acceleratoin
-  const slowRate = 1.015; //RATE of deceleration (idek how to spell that...)
-  var isHovering = false;
-  var imageGallery = document.querySelector('#about-image-gallery');
-  var imageGalleryImages = document.getElementsByClassName('aboutimage');
-  var speedModifierSlider = document.getElementById('speedModifier')
-  var modifierText = document.getElementById('speedModifierDiv')
-  const toggleButton = document.getElementById('image-toggle-button');
-  speedModifierSlider.max = "8";
-  modifierText.innerHTML = "Modify the scroll speed: 0.5x."; //just for mobile
+//   var scrollAmount = 0;
+//   var scrollSpeed = 0.01;
+//   var scrollSpeedInitial = 0.06; // Initial speed to reset back to later on
+//   var maxSpeed = .5 // Maximum speed, has to do with adding 20 to the scroll idk y.
+//   const growthRate = 1.025; // RATE of acceleratoin
+//   const slowRate = 1.015; //RATE of deceleration (idek how to spell that...)
+//   var isHovering = false;
+//   var imageGallery = document.querySelector('#about-image-gallery');
+//   var imageGalleryImages = document.getElementsByClassName('aboutimage');
+//   var speedModifierSlider = document.getElementById('speedModifier')
+//   var modifierText = document.getElementById('speedModifierDiv')
+//   const toggleButton = document.getElementById('image-toggle-button');
+//   speedModifierSlider.max = "8";
+//   modifierText.innerHTML = "Modify the scroll speed: 0.5x."; //just for mobile
 
-  //for toggle button stuff
-  const aboutTextContainter = document.getElementById('about-text-container')
-  const imageDescriptions = document.getElementsByClassName('imageDescription');
-
-
-  toggleButton.addEventListener('click', function(){
-    console.log("pressed!");
-    Array.from(imageDescriptions).forEach(imageDescription => {
-      imageDescription.classList.toggle('imageDescription-toggle');
-    })
-    Array.from(imageGalleryImages).forEach(image => {
-      image.classList.toggle('aboutimage-toggle');
-    })
-    aboutTextContainter.classList.toggle('about-text-container-toggle')
-    toggleButton.classList.toggle('text-toggle-on');
-
-  })
+//   //for toggle button stuff
+//   const aboutTextContainter = document.getElementById('about-text-container')
+//   const imageDescriptions = document.getElementsByClassName('imageDescription');
 
 
-  Array.from(imageGalleryImages).forEach(element => {
-    element.addEventListener('touchstart', function() {
-      element.style.cssText = "transform: translateY(0px);";
-      isHovering = true;
-    })
-    element.addEventListener('touchend', function() {
-      isHovering = false;
-    })
-  });
-  timeStamp = 0 //simple binary checker thing to see if we go from 0 slider position to literally anything else.
-  speedModifierSlider.oninput = function(){
-    diceRoll = Math.random() //random number 0-1
-    modifierValue = speedModifierSlider.value;
-    modifierText.innerHTML = "Modify the scroll speed: " + modifierValue/8 + "x.";
-    maxSpeed = modifierValue/4;
+//   toggleButton.addEventListener('click', function(){
+//     console.log("pressed!");
+//     Array.from(imageDescriptions).forEach(imageDescription => {
+//       imageDescription.classList.toggle('imageDescription-toggle');
+//     })
+//     Array.from(imageGalleryImages).forEach(image => {
+//       image.classList.toggle('aboutimage-toggle');
+//     })
+//     aboutTextContainter.classList.toggle('about-text-container-toggle')
+//     toggleButton.classList.toggle('text-toggle-on');
+
+//   })
+
+
+//   Array.from(imageGalleryImages).forEach(element => {
+//     element.addEventListener('touchstart', function() {
+//       element.style.cssText = "transform: translateY(0px);";
+//       isHovering = true;
+//     })
+//     element.addEventListener('touchend', function() {
+//       isHovering = false;
+//     })
+//   });
+//   timeStamp = 0 //simple binary checker thing to see if we go from 0 slider position to literally anything else.
+//   speedModifierSlider.oninput = function(){
+//     diceRoll = Math.random() //random number 0-1
+//     modifierValue = speedModifierSlider.value;
+//     modifierText.innerHTML = "Modify the scroll speed: " + modifierValue/8 + "x.";
+//     maxSpeed = modifierValue/4;
  
 
-    if(timeStamp == 1){ //if the slider WAS at 0, then we need to encourage the speed to change a little.
-      timeStamp = 0;
-      scrollSpeed += .1;
+//     if(timeStamp == 1){ //if the slider WAS at 0, then we need to encourage the speed to change a little.
+//       timeStamp = 0;
+//       scrollSpeed += .1;
 
-    }
-    if(maxSpeed == 0 ){ //if the user is on 0, and they increase it:
-      timeStamp = 1;
-    }
+//     }
+//     if(maxSpeed == 0 ){ //if the user is on 0, and they increase it:
+//       timeStamp = 1;
+//     }
    
-    if(modifierValue == 0 && diceRoll < .1){ // 1/10 chance to show easter egg
-      modifierText.innerHTML = "What are you wanting to look at so closely? 🤨";
-    }
+//     if(modifierValue == 0 && diceRoll < .1){ // 1/10 chance to show easter egg
+//       modifierText.innerHTML = "What are you wanting to look at so closely? 🤨";
+//     }
   
 
 
-  }
+//   }
  
 
-  function scrollGallery() {
-    var currentTopImage = document.querySelector('.imageWrapper'); //get's the first one, as we just do querySelector.
-    var currentTopImageRect = currentTopImage.getBoundingClientRect();
+//   function scrollGallery() {
+//     var currentTopImage = document.querySelector('.imageWrapper'); //get's the first one, as we just do querySelector.
+//     var currentTopImageRect = currentTopImage.getBoundingClientRect();
 
-    if(scrollSpeed == maxSpeed) {
-      scrollAmount += parseFloat(scrollSpeed.toFixed(1));
-    }
-    else{
-      scrollAmount += scrollSpeed;
-    }
+//     if(scrollSpeed == maxSpeed) {
+//       scrollAmount += parseFloat(scrollSpeed.toFixed(1));
+//     }
+//     else{
+//       scrollAmount += scrollSpeed;
+//     }
 
-    count = 1;
+//     count = 1;
 
-    Array.from(imageGalleryImages).forEach(element => {
-      if (currentTopImageRect.right <= 0) {
-        // // actualElement = document.querySelector('.aboutimage #'+ );
-        var parentDiv = currentTopImage;
+//     Array.from(imageGalleryImages).forEach(element => {
+//       if (currentTopImageRect.right <= 0) {
+//         // // actualElement = document.querySelector('.aboutimage #'+ );
+//         var parentDiv = currentTopImage;
 
-        imageGallery.appendChild(parentDiv); 
-        Array.from(imageGalleryImages).forEach(img => { // why...am i doin this loop?
-          var imageGallery = document.querySelector('#about-image-gallery');
+//         imageGallery.appendChild(parentDiv); 
+//         Array.from(imageGalleryImages).forEach(img => { // why...am i doin this loop?
+//           var imageGallery = document.querySelector('#about-image-gallery');
 
-          imageGallery.style.cssText = "transform: translateX(" + (scrollAmount + window.scrollX + 20)  + "px);"; /* FIRST TRY WITH THE SCROLL Y LETS GO IT WORKED IM...not that smart.. BUT ALMOST!!!!*/
-        });
-      }
-      else
-      {
-       element.parentElement.style.cssText = "transform: translateX(-"+scrollAmount+"px);";    
+//           imageGallery.style.cssText = "transform: translateX(" + (scrollAmount + window.scrollX + 20)  + "px);"; /* FIRST TRY WITH THE SCROLL Y LETS GO IT WORKED IM...not that smart.. BUT ALMOST!!!!*/
+//         });
+//       }
+//       else
+//       {
+//        element.parentElement.style.cssText = "transform: translateX(-"+scrollAmount+"px);";    
 
-      }
-      });
+//       }
+//       });
 
    
-    if(isHovering){
-      if(speedModifierSlider.value == 0){ //if the user chooses 0, then when they hover it won't move
-        scrollSpeedInitial = 0;}
-        else{
-          scrollSpeedInitial = .06
-        }
-      scrollSpeed = Number(Math.max(scrollSpeedInitial, scrollSpeed / slowRate));}
-    else {
-      scrollSpeed = Number(Math.min(maxSpeed, scrollSpeed * growthRate));
-    }
+//     if(isHovering){
+//       if(speedModifierSlider.value == 0){ //if the user chooses 0, then when they hover it won't move
+//         scrollSpeedInitial = 0;}
+//         else{
+//           scrollSpeedInitial = .06
+//         }
+//       scrollSpeed = Number(Math.max(scrollSpeedInitial, scrollSpeed / slowRate));}
+//     else {
+//       scrollSpeed = Number(Math.min(maxSpeed, scrollSpeed * growthRate));
+//     }
     
     
-  console.log(scrollSpeed);
-  console.log("scroll speed");
+//   console.log(scrollSpeed);
+//   console.log("scroll speed");
 
 
-  window.requestAnimationFrame(scrollGallery);
+//   window.requestAnimationFrame(scrollGallery);
 
-}
+// }
 
-  scrollGallery();
+//   scrollGallery();
 
 
 }

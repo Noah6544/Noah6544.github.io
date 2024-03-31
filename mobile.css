@@ -537,27 +537,10 @@ body {
 }
 
 .text-toggle {
-    z-index: 9000;
-    position: fixed;
-    opacity: .6;
-    top: 50px;
-    right: 50px;
-    padding: 7px;
-    border-radius: 15px;
-    margin: 0;
-    color: white;
-    background-color: rgba(112, 177, 237, 0.777);
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: var(--text-shadow);
-    transition: all 1s ease;
+    display: none;
 }
 
 
-
-.text-toggle-on {
-    background-color: rgb(112, 177, 237);
-    opacity: 1;
-}
 
 #about-container{
     height: 100dvh; /*learned this from rca carshow!! */
@@ -585,42 +568,20 @@ body {
 
 
 #about-image-gallery{
-    position: fixed;
-    left: 0;
-    height: 100dvh; /* lets go, overflow-hidden doesn't work to disable scroll, so just make the height 100%! */
-    flex-direction: row;
-    /* align-items: flex-start; */
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
-
+    display: none;
 }
 
-.imageWrapper {
-    position: relative; /*LETS GO, this needs to stay here so that the absolutely positioned description has something to base the top postiion on!!! this one took me a second */
-}
 
-.aboutimage {
-    pointer-events: none;
-    height: 80vh;  
-    width: 95vw;
-    object-fit:contain;
-    border-radius: 25px;
-    border: 2px solid var(--t5);
-    transition: all 2s ease;
-    opacity: .2;
-}
-
-.aboutimage-toggle {
-    opacity: .6;
-}
 
 
 #hoverme {
     display: none;
 }
 
+
+#speedModifierDiv {
+    display: none;
+}
 
 
 .imageDescription {
@@ -1186,31 +1147,10 @@ li:before {
 }
 
 .slider {
-    appearance: none;
-    background-color: rgb(85, 85, 85);
-    border-radius: 50px;
-    border: 1px solid rgb(55, 55, 55);
-    width: 50%;
-    height: clamp(6px, 1.5%, 10px);
-}
-
-.slider:hover{
-    cursor: pointer;
-    background-color: rgba(85, 85, 85, 0.474);
+    display: none;
 
 }
 
-/* Chrome, Edge, Safari, Opera */
-input[type="range" i]::-webkit-slider-thumb {
-    background: rgb(106, 106, 106);
-    border: solid rgb(35, 35, 35) 1px;
-
- }
-/* Firefox */
-input[type="range"]::-moz-range-thumb { 
-    background: rgb(106, 106, 106);
-    border: solid rgb(35, 35, 35) 1px;
-}
 
 #circle {
     display: none;

@@ -347,7 +347,6 @@ if (currentPage == 'index.html' || !currentPage || currentPage == ""){ //do all 
       if (currentTopImageRect.bottom <= 0) {
         // // actualElement = document.querySelector('.aboutimage #'+ );
         let parentDiv = currentTopImage;
-
         imageGallery.appendChild(parentDiv);
         Array.from(imageGalleryImages).forEach(img => {
           let imageGallery = document.querySelector('#about-image-gallery');
