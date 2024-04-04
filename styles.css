@@ -825,7 +825,9 @@ body {
     text-align: center;
 }
 
-
+.mobileDisclaimer{
+    display: none;
+}
 /* EXPERIENCE AND FUN FACTS */
 #experience-page-container {
     display: flex;
