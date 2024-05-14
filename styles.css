@@ -234,7 +234,7 @@ body {
     padding: 4px;
     opacity: 0;
     border-radius: 100%;
-    animation: fade-in 3s 5s forwards;
+    animation: fade-in 3s .5s forwards;
 }
 
 .menu-closed:hover{
@@ -491,8 +491,6 @@ body {
 
 .imageWrapper {
     position: relative; /*LETS GO, this needs to stay here so that the absolutely positioned description has something to base the top postiion on!!! this one took me a second */
-    
-    
 }
 
 .aboutimage {
@@ -634,7 +632,7 @@ body {
     box-shadow: rgba(255, 255, 255, .2) 0px 0px 150px, rgba(65, 136, 217, 0.2)0px 0px 10px;
     border-radius: 10px;
     border: solid .02px rgba(107, 148, 169, 0.648);
-    animation: 2s cubic-bezier(.76,0,.29,1) forwards scaleXY .5s;
+    animation: 1s cubic-bezier(.76,0,.29,1) forwards scaleXY 0s;
 }
 
 .reverse-project-card{

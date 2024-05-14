@@ -5,7 +5,7 @@ window.addEventListener('mousemove', function(e){
     const mouseY = e.clientY; 
     circle.style.transform = `translate(${mouseX-15}px, ${mouseY-15}px)`
     keyframes =[{transform:`translate(${mouseX-15}px, ${mouseY-15}px)`}]
-    circle.animate(keyframes,{duration: 1500})
+    circle.animate(keyframes,{duration: 250})
 })
 
 divsToHover = ['#menu','#my-projects-container','.experience-image','#about-image-gallery','#abouticon','#projects-icon','#experience-icon','#contact-icon','#home-icon','#linkedinlogo','#githublogo','#imessagelogo','#speedModifierDiv','#project-django-container']

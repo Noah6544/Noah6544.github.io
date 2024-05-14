@@ -52,7 +52,7 @@ function UnblurEverything(){
       ; /*do nothing for navbar, ignore it and don't even update CSS, cuz that ruins its abosolute pos */
     }
     else {
-      element.style.cssText = "filter: blur(0px); transition: all 1s ease;";
+      element.style.cssText = "filter: blur(0px); transition: all .2s ease;";
     }  
   });
   }  
@@ -82,7 +82,7 @@ function Click_projectcard(){
   BlurEverythingExcept(projectPopup);
   Array.from(subDivList).forEach(element => {
     element.style.animationName = 'staggerup';
-    element.style.animationDuration = '2s';
+    element.style.animationDuration = '1s';
     element.style.animationDelay =  delay + 's';
     element.style.animationTimingFunction = 'ease';
     element.style.animationFillMode = 'forwards';
