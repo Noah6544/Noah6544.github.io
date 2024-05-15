@@ -290,7 +290,7 @@ body {
     padding: 4px;
     opacity: 1;
     border-radius: 100%;
-    animation: fade-in 5s 0s forwards;
+    animation: fade-in 2s 0s forwards;
 }
 
 .menu-closed i{
@@ -705,7 +705,7 @@ body {
     box-shadow: rgba(204, 88, 88, 0.1) 0px 3px 6px, rgba(240, 13, 13, 0.23) 0px 3px 6px;
     border-radius: 10px;
     border: solid .02px rgba(107, 148, 169, 0.648);
-    animation: 2s cubic-bezier(.76,0,.29,1) forwards scaleXY .5s;
+    animation: 1s cubic-bezier(.76,0,.29,1) forwards scaleXY 0s;
 }
 
 .reverse-project-card{
@@ -713,7 +713,7 @@ body {
     height: 70vh;
     width: 70vw;
     padding: clamp(30px, 70px, 100px);
-    animation: 4s cubic-bezier(.76,0,.29,1) 3s reverse forwards scaleXY; /*needs this delay for some reason even tho it doesn't do anything*/
+    animation: 2s cubic-bezier(.76,0,.29,1) 3s reverse forwards scaleXY; /*needs this delay for some reason even tho it doesn't do anything*/
 }
 
 
