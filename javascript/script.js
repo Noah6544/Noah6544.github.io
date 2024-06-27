@@ -1,4 +1,4 @@
-// removed the EventListner because it works now for some reason without it!
+// removed the EventListner because it works now for some reason without it! LOL i'm coming back here on 6/27/24 looking for this and this was funny to me - i really had no clue why it worked
 function CheckItemInView(item){
   const rectangle = item.getBoundingClientRect();
   return (
