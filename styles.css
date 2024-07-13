@@ -321,7 +321,7 @@ body {
     margin: 0 auto; /*aligns 85% div in the middle instead of just left- still don't know why this works.*/
     transition: all .45s cubic-bezier(.17,.2,.23,1.01);
     font-size: clamp(30px,6vh,75px);
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Manrope', sans-serif; 
     font-weight: 800;
 
 
@@ -344,7 +344,7 @@ body {
     font-size: clamp(30px,6vh,75px);
     transition: all .45s cubic-bezier(.17,.2,.23,1.01);
 
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Manrope', sans-serif; 
     font-weight: 800;
 
 }
@@ -376,7 +376,7 @@ body {
 
 
 .navbar a:link, .navbar-hidden a:link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manrope', sans-serif;
     text-decoration: none;
     transition: all .45s ease;
     color: rgb(166, 166, 166);
@@ -422,7 +422,7 @@ body {
     color: rgb(var(--font-color));
     font-size: clamp(25px,2vw,35px);
     text-shadow: var(--text-shadow);
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Manrope',sans-serif;
     font-weight: 800;
 
 }
@@ -431,7 +431,7 @@ body {
     font-size: clamp(.5em,3vw,5.3em);
     animation: 3s ease forwards 0s 1 slidein;
     transition: filter 1s ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 700;
 }
 
@@ -440,7 +440,7 @@ body {
     font-size: clamp(.5em,4vw,6em);
     color: rgb(207, 207, 255);
     animation: 3s ease forwards 1s 1 slidein;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 800;
 }
 
@@ -448,18 +448,18 @@ body {
     text-align: left;
     transform: translateX(-200%);
     max-width: 45vw;
-    font-size: clamp(.5em,2.5vw,5.5em);
+    font-size: clamp(16px,4.5vw,30px);
     animation: 4s ease forwards 1s 1 slidein;
     font-weight: 600;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 /* ABOUT PAGE STUFF */
 
 
 #aboutme-title {
-    font-weight: 800;
+    font-weight: 100;
 }
 
 #about-container{
@@ -540,7 +540,7 @@ body {
     font-weight: 400;
     color: var(--t5);
     text-shadow: var(--text-shadow);
-    font-size: clamp(14.5px,1vw,19.2px);
+    font-size: clamp(14.5px,1.2vw,19.2px);
 }
 
 
@@ -875,7 +875,7 @@ body {
     
 }
 .year {
-    font-family: 'Neucha',sans;
+    font-family: 'Neucha',sans-serif;
 
 }
 .list-item { 
